@@ -20,7 +20,16 @@ public class User {
     
     public User(){}
 
-
+        public User(String name, String first_name,String second_name, String email, String password, String entity_id, String role_id){
+        
+            this.name = name;
+            this.first_name = first_name;
+            this.second_name = second_name;
+            this.email = email;
+            this.password = password;
+            this.entity_id = entity_id;
+            this.role_id = role_id;
+      }
 
         public User(int id, String name, String first_name,String second_name, String email, String password, String entity_id, String role_id){
         

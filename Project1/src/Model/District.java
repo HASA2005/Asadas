@@ -13,6 +13,13 @@ public class District {
     public District(){}
     
     
+    public District(String name, String canton_id){
+        
+        this.name = name;
+        this.canton_id = canton_id;
+    
+    }
+    
     public District(int id, String name, String canton_id){
         this.id = id;
         this.name = name;

@@ -14,16 +14,19 @@ public class Canton {
     
     public Canton(){}
     
-     public Canton( String name, String province_id){;
+     public Canton(String name, String province_id){
         this.name= name;
         this.province_id= province_id;
+    
+    
     }
-
     
     public Canton(int id, String name, String province_id){
         this.id = id;
         this.name= name;
         this.province_id= province_id;
+    
+    
     }
 
     /**

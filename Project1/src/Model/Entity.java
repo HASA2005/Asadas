@@ -17,7 +17,15 @@ public class Entity {
     
     public Entity(){}
     
+        public Entity(int legal_ID, String name, int telephone, String address, String description){
     
+        this.legal_ID = legal_ID;
+        this.name = name;
+        this.telephone= telephone;
+        this.address = address;
+        this.description = description;
+    }
+
     
     public Entity(int id, int legal_ID, String name, int telephone, String address, String description){
     
@@ -27,10 +35,6 @@ public class Entity {
         this.telephone= telephone;
         this.address = address;
         this.description = description;
-    
-    
-    
-    
     }
 
     /**
