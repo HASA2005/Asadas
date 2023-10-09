@@ -1,26 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 
 public class User {
-    private int id;
-    private String name;
-    private String first_name;
-    private String second_name;
-    private String email;
-    private String password;
-    private String entity_id;
-    private String role_id;
-    
+    private int id,entity_id,role_id;
+    private String name,first_name,second_name,email,password;
     
     
     
     public User(){}
 
-        public User(String name, String first_name,String second_name, String email, String password, String entity_id, String role_id){
+        public User(String name, String first_name,String second_name, String email, String password, int entity_id, int role_id){
         
             this.name = name;
             this.first_name = first_name;
@@ -31,7 +21,7 @@ public class User {
             this.role_id = role_id;
       }
 
-        public User(int id, String name, String first_name,String second_name, String email, String password, String entity_id, String role_id){
+        public User(int id, String name, String first_name,String second_name, String email, String password, int entity_id, int role_id){
         
             this.id = id;
             this.name = name;
@@ -130,28 +120,28 @@ public class User {
     /**
      * @return the entity_id
      */
-    public String getEntity_id() {
+    public int getEntity_id() {
         return entity_id;
     }
 
     /**
      * @param entity_id the entity_id to set
      */
-    public void setEntity_id(String entity_id) {
+    public void setEntity_id(int entity_id) {
         this.entity_id = entity_id;
     }
 
     /**
      * @return the role_id
      */
-    public String getRole_id() {
+    public int getRole_id() {
         return role_id;
     }
 
     /**
      * @param role_id the role_id to set
      */
-    public void setRole_id(String role_id) {
+    public void setRole_id(int role_id) {
         this.role_id = role_id;
     }
 

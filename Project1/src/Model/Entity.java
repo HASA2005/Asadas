@@ -1,18 +1,11 @@
 
 package Model;
 
-/**
- *
- * @author Cliente
- */
+
 public class Entity {
     
-    private int id;
-    private int legal_ID;
-    private String name;
-    private int telephone;
-    private String address;
-    private String description;
+    private int id,legal_ID,telephone ;
+    private String name,address,description;
     
     
     public Entity(){}

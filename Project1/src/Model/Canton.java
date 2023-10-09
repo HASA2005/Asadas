@@ -1,14 +1,10 @@
 
 package Model;
 
-/**
- *
- * @author Cliente
- */
+
 public class Canton {
     private int id;
-    private String name;
-    private String province_id;
+    private String name,province_id;
     
     
     

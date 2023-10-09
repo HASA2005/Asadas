@@ -7,10 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Cliente
- */
+
 public class EntityDAO {
     
      public EntityDAO() {

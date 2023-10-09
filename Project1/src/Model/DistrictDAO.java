@@ -7,10 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Cliente
- */
 public class DistrictDAO {
     
     public DistrictDAO() {
@@ -24,7 +20,7 @@ public class DistrictDAO {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setInt(1, District.getId());
             ps.setString(2, District.getName());
-            ps.setString(4, District.getCanton_id());
+            ps.setInt(4, District.getCanton_id());
             ps.execute();
             JOptionPane.showMessageDialog(null, "Se insertó correctamente el estudiante");
         } catch (SQLException e) {
@@ -45,7 +41,7 @@ public class DistrictDAO {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                String canton_id = resultSet.getString("canton_id");
+                int canton_id = resultSet.getInt("canton_id");
                 Districts.add(new District(id, name, canton_id));
             }
         } catch (SQLException e) {
@@ -64,7 +60,7 @@ public class DistrictDAO {
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setString(2, District.getName());
-            ps.setString(4, District.getCanton_id());
+                ps.setInt(4, District.getCanton_id());
             ps.execute();
             JOptionPane.showMessageDialog(null, "Modificación Exitosa");
 

@@ -3,19 +3,11 @@ package Model;
 
 import java.util.Date;
 
-/**
- *
- * @author Cliente
- */
+
 public class FlowMeasurement {
-    private int id;
-    private String method;
-    private String capacity;
-    private String observation;
+    private int id,rising_id ,samplingsite_id ;
+    private String method,capacity, observation,weather ;
     private Date date;
-    private String weather;
-    private int rising_id;
-    private int samplingsite_id;
     
     public FlowMeasurement(){}
     
