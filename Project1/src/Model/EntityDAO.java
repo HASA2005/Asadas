@@ -16,7 +16,7 @@ public class EntityDAO {
    public void create(Entity Entity) {
 
         DBConnection db = new DBConnection();
-        String consultaSQL = "INSERT INTO students (id, legal_ID, name, telephone,address,description) VALUES (?, ?, ?, ?,?,?)";
+        String consultaSQL = "INSERT INTO Entity (id, legal_ID, name, telephone,address,description) VALUES (?, ?, ?, ?,?,?)";
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setInt(1, Entity.getLegal_ID());
@@ -25,9 +25,9 @@ public class EntityDAO {
             ps.setString(4, Entity.getAddress());
             ps.setString(5, Entity.getDescription());
             ps.execute();
-            JOptionPane.showMessageDialog(null, "Se insertó correctamente el estudiante");
+            JOptionPane.showMessageDialog(null, "Se insertó correctamente la entidad");
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "No se insertó correctamente el estudiante, error: " + e.toString());
+            JOptionPane.showMessageDialog(null, "No se insertó correctamente la entidad, error: " + e.toString());
         } finally {
             db.disconnect();
         }
@@ -62,7 +62,7 @@ public class EntityDAO {
     public void update(Entity Entity) {
 
         DBConnection db = new DBConnection();
-        String consultaSQL = "UPDATE students SET legal_ID=?, name=?, telephone=?, address=?,description=? WHERE id=?";
+        String consultaSQL = "UPDATE Entity SET legal_ID=?, name=?, telephone=?, address=?,description=? WHERE id=?";
 
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
@@ -92,7 +92,7 @@ public class EntityDAO {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setInt(1, id);
             ps.execute();
-            JOptionPane.showMessageDialog(null, "Se eliminó correctamente el estudiante");
+            JOptionPane.showMessageDialog(null, "Se eliminó correctamente la entidad");
 
         } catch (SQLException e) {
 

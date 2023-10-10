@@ -17,16 +17,16 @@ public class CantonDAO {
     public void create(Canton Canton) {
 
         DBConnection db = new DBConnection();
-        String consultaSQL = "INSERT INTO students (id, name, province_id,) VALUES (?, ?, ?)";
+        String consultaSQL = "INSERT INTO Cantons (id, name, province_id,) VALUES (?, ?, ?)";
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setInt(1, Canton.getId());
             ps.setString(2, Canton.getName());
             ps.setString(2, Canton.getProvince_id());
             ps.execute();
-            JOptionPane.showMessageDialog(null, "Se insertó correctamente el estudiante");
+            JOptionPane.showMessageDialog(null, "Se insertó correctamente el Canton");
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "No se insertó correctamente el estudiante, error: " + e.toString());
+            JOptionPane.showMessageDialog(null, "No se insertó correctamente el Canton, error: " + e.toString());
         } finally {
             db.disconnect();
         }
@@ -34,8 +34,8 @@ public class CantonDAO {
      public List<Canton> read() {
 
         DBConnection db = new DBConnection();
-        List<Canton> Cantones = new ArrayList<>();
-        String sql = "SELECT * FROM Cantones";
+        List<Canton> Cantons = new ArrayList<>();
+        String sql = "SELECT * FROM Cantons";
 
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(sql);
@@ -44,20 +44,20 @@ public class CantonDAO {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String province_id = resultSet.getString("Province_id");
-                Cantones.add(new Canton(id, name, province_id));
+                Cantons.add(new Canton(id, name, province_id));
             }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         } finally {
             db.disconnect();
         }
-        return Cantones;
+        return Cantons;
     }
 
     public void update(Canton Canton) {
 
         DBConnection db = new DBConnection();
-        String consultaSQL = "UPDATE students SET name=?, getProvince_id=?, WHERE id=?";
+        String consultaSQL = "UPDATE Cantons SET name=?, getProvince_id=?, WHERE id=?";
 
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
@@ -80,13 +80,13 @@ public class CantonDAO {
 
         DBConnection db = new DBConnection();
 
-        String consultaSQL = "DELETE FROM Cantones WHERE id=?";
+        String consultaSQL = "DELETE FROM Cantons WHERE id=?";
 
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setInt(1, id);
             ps.execute();
-            JOptionPane.showMessageDialog(null, "Se eliminó correctamente el estudiante");
+            JOptionPane.showMessageDialog(null, "Se eliminó correctamente el Canton");
 
         } catch (SQLException e) {
 
