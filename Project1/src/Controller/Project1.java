@@ -15,7 +15,7 @@ public class Project1 {
         
         Login log = new Login();
         log.setVisible(true);
-        log.setLocationRelativeTo(null);
+        
         }
     
 }
