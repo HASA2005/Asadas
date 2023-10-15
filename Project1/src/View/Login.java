@@ -39,6 +39,11 @@ public class Login extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/user.png"))); // NOI18N
 
@@ -150,7 +155,7 @@ public class Login extends javax.swing.JFrame {
             Administrador Adm = new Administrador();
             Adm.setVisible(true);
             this.dispose();
-        } else if (usuario.equals("SuperAdministrador") && contraseña.equals("1234")) {
+        } else if (usuario.equals("SuperA") && contraseña.equals("1234")) {
             JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
             SuperAdministrador SuperAdm = new SuperAdministrador();
             SuperAdm.setVisible(true);
@@ -160,6 +165,11 @@ public class Login extends javax.swing.JFrame {
         }
     }
     }//GEN-LAST:event_jButtonStartActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
 
