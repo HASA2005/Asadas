@@ -4,16 +4,17 @@ package Model;
 public class Nascent {
     private int id,province_id, district_id, entity_id, canton_id;
     private String name, address,description ;
-    private double length;
+    private double latitude,length;
     
    
     
     public Nascent (){}
     
-     public Nascent(String name, String address, double length, String description, int province_id , int canton_id , int district_id, int entity_id ){
+     public Nascent(String name, String address,double latitude, double length, String description, int province_id , int canton_id , int district_id, int entity_id ){
 
         this.name = name;
         this.address = address;
+        this.latitude = latitude;
         this.length = length;
         this.description = description;
         this.province_id = province_id;
@@ -23,10 +24,11 @@ public class Nascent {
         
     }
 
-    public Nascent(int id, String name, String address, double length, String description, int province_id , int canton_id , int district_id, int entity_id){
+    public Nascent(int id, String name, String address, double latitude,double length, String description, int province_id , int canton_id , int district_id, int entity_id){
         this.id = id;
         this.name = name;
         this.address = address;
+        this.latitude = latitude;
         this.length = length;
         this.description = description;
         this.province_id = province_id;
@@ -160,6 +162,20 @@ public class Nascent {
      */
     public void setCanton_id(int canton_id) {
         this.canton_id = canton_id;
+    }
+
+    /**
+     * @return the latitude
+     */
+    public double getLatitude() {
+        return latitude;
+    }
+
+    /**
+     * @param latitude the latitude to set
+     */
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 
 

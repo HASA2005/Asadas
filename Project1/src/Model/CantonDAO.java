@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
 
 
 public class CantonDAO {
@@ -14,23 +13,7 @@ public class CantonDAO {
     public CantonDAO() {
     }
 
-    public void create(Canton Canton) {
-
-        DBConnection db = new DBConnection();
-        String consultaSQL = "INSERT INTO Cantons (id, name, province_id,) VALUES (?, ?, ?)";
-        try {
-            PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
-            ps.setInt(1, Canton.getId());
-            ps.setString(2, Canton.getName());
-            ps.setString(2, Canton.getProvince_id());
-            ps.execute();
-            JOptionPane.showMessageDialog(null, "Se insertó correctamente el Canton");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "No se insertó correctamente el Canton, error: " + e.toString());
-        } finally {
-            db.disconnect();
-        }
-    }
+    
      public List<Canton> read() {
 
         DBConnection db = new DBConnection();
@@ -54,46 +37,44 @@ public class CantonDAO {
         return Cantons;
     }
 
-    public void update(Canton Canton) {
-
+    public int getIDCanton(String name) {
+        int value = 0;
         DBConnection db = new DBConnection();
-        String consultaSQL = "UPDATE Cantons SET name=?, getProvince_id=?, WHERE id=?";
-
+        String sql = "SELECT id FROM cantons WHERE name = ?";
         try {
-            PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
-            ps.setInt(1, Canton.getId());
-            ps.setString(2, Canton.getName());
-            ps.setString(4, Canton.getProvince_id());
-           
-            ps.execute();
-            JOptionPane.showMessageDialog(null, "Modificación Exitosa");
-
+            PreparedStatement ps = db.getConnection().prepareStatement(sql);
+            ps.setString(1, name);
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()) {
+                value = resultSet.getInt("id");
+            }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "No se modificó, error:" + e.toString());
-        }finally {
+            System.err.println("Error: " + e.getMessage());
+        } finally {
             db.disconnect();
         }
-        
+        return value;
     }
-
-    public void delete(int id) {
-
+    
+     public String getNameCanton(int id) {
+        String value = "";
         DBConnection db = new DBConnection();
-
-        String consultaSQL = "DELETE FROM Cantons WHERE id=?";
-
+        String sql = "SELECT name FROM cantons WHERE id = ?";
         try {
-            PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
+            PreparedStatement ps = db.getConnection().prepareStatement(sql);
             ps.setInt(1, id);
-            ps.execute();
-            JOptionPane.showMessageDialog(null, "Se eliminó correctamente el Canton");
-
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()) {
+                value = resultSet.getString("name");
+            }
         } catch (SQLException e) {
-
-            JOptionPane.showMessageDialog(null, "No se pudo eliminar, error: " + e.toString());
-        }finally {
+            System.err.println("Error: " + e.getMessage());
+        } finally {
             db.disconnect();
-        } 
+        }
+        return value;
     }
+
+   
     
 }

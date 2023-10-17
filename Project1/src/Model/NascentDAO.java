@@ -17,17 +17,18 @@ public class NascentDAO {
     public void create(Nascent nascent) {
 
         DBConnection db = new DBConnection();
-        String consultaSQL = "INSERT INTO Nascents (name, address, length, description, province_id, district_id, entity_id, canton_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String consultaSQL = "INSERT INTO nascents (name, address, latitude,length, description, province_id, district_id, entity_id, canton_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setString(1, nascent.getName());
             ps.setString(2, nascent.getAddress());
-            ps.setDouble(2, nascent.getLength());
-            ps.setString(4, nascent.getDescription());
-            ps.setInt(5, nascent.getProvince_id());
-            ps.setInt(5, nascent.getCanton_id());
-            ps.setInt(5, nascent.getDistrict_id());
-            ps.setInt(5, nascent.getEntity_id());
+            ps.setDouble(3, nascent.getLatitude());
+            ps.setDouble(4, nascent.getLength());
+            ps.setString(5, nascent.getDescription());
+            ps.setInt(6, nascent.getProvince_id());
+            ps.setInt(7, nascent.getCanton_id());
+            ps.setInt(8, nascent.getDistrict_id());
+            ps.setInt(9, nascent.getEntity_id());
             ps.execute();
             JOptionPane.showMessageDialog(null, "Se insertó correctamente la naciente");
         } catch (SQLException e) {
@@ -50,13 +51,14 @@ public class NascentDAO {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String address = resultSet.getString("address");
+                Double latitude = resultSet.getDouble("latitude");
                 Double length = resultSet.getDouble("length");
                 String description = resultSet.getString("description");
                 int provinceID = resultSet.getInt("province_id");
                 int cantonID = resultSet.getInt("canton_id");
                 int districtID = resultSet.getInt("district_id");
                 int entityID = resultSet.getInt("entity_id");
-                nascents.add(new Nascent(id,name,address,length,description ,provinceID,cantonID,districtID,entityID ));
+                nascents.add(new Nascent(id,name,address,latitude,length,description ,provinceID,cantonID,districtID,entityID ));
             }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
@@ -69,19 +71,20 @@ public class NascentDAO {
     public void update(Nascent nascent) {
 
         DBConnection db = new DBConnection();
-        String consultaSQL = "UPDATE students SET name=?, address=?, length=? , description=?, province_id=?, canton_id=?, district_id=?, entity_id=? WHERE id=?";
+        String consultaSQL = "UPDATE students SET name=?, address=?,latitude=?, length=? , description=?, province_id=?, canton_id=?, district_id=?, entity_id=? WHERE id=?";
 
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(consultaSQL);
             ps.setString(1, nascent.getName());
             ps.setString(2, nascent.getAddress());
-            ps.setDouble(3, nascent.getLength());
-            ps.setString(4, nascent.getDescription());
-            ps.setInt(5, nascent.getProvince_id());
-            ps.setInt(6, nascent.getCanton_id());
-            ps.setInt(7, nascent.getDistrict_id());
-            ps.setInt(8, nascent.getEntity_id());
-            ps.setInt(9, nascent.getId());
+            ps.setDouble(3, nascent.getLatitude());
+            ps.setDouble(4, nascent.getLength());
+            ps.setString(5, nascent.getDescription());
+            ps.setInt(6, nascent.getProvince_id());
+            ps.setInt(7, nascent.getCanton_id());
+            ps.setInt(8, nascent.getDistrict_id());
+            ps.setInt(9, nascent.getEntity_id());
+            ps.setInt(10, nascent.getId());
             ps.execute();
             JOptionPane.showMessageDialog(null, "Modificación Exitosa");
 

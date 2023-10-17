@@ -139,31 +139,32 @@ public class Login extends javax.swing.JFrame {
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
         // TODO add your handling code here:
-         String usuario = jTextNameUser.getText();
+        // TODO add your handling code here:
+        String usuario = jTextNameUser.getText();
         String contraseña = jPasswordUser.getText();
 
-       if (usuario.isEmpty() || contraseña.isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Error algun campo está vacío");
-    } else {
-        if (usuario.equals("Digitador")) {
-            JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
-            Digitador digitador = new Digitador();
-            digitador.setVisible(true);
-            this.dispose();
-        } else if (usuario.equals("Administrador") && contraseña.equals("2023")) {
-            JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
-            Administrador Adm = new Administrador();
-            Adm.setVisible(true);
-            this.dispose();
-        } else if (usuario.equals("SuperA") && contraseña.equals("1234")) {
-            JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
-            SuperAdministrador SuperAdm = new SuperAdministrador();
-            SuperAdm.setVisible(true);
-            this.dispose();
+        if (usuario.isEmpty() || contraseña.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Error algun campo está vacío");
         } else {
-            JOptionPane.showMessageDialog(null, "Su usuario o contraseña está incorrecta");
+            if (usuario.equals("Digitador")) {
+                JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
+                Digitador digitador = new Digitador();
+                digitador.setVisible(true);
+                this.dispose();
+            } else if (usuario.equals("Adm") && contraseña.equals("2023")) {
+                JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
+                Administrador Adm = new Administrador();
+                Adm.setVisible(true);
+                this.dispose();
+            } else if (usuario.equals("SA") && contraseña.equals("1234")) {
+                JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
+                SuperAdministrador SuperAdm = new SuperAdministrador();
+                SuperAdm.setVisible(true);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Su usuario o contraseña está incorrecta");
+            }
         }
-    }
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

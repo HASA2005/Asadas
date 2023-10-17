@@ -5,26 +5,28 @@ package Model;
 public class Entity {
     
     private int id,legal_ID,telephone ;
-    private String name,address,description;
+    private String name,mail,address,description;
     
     
     public Entity(){}
     
-        public Entity(int legal_ID, String name, int telephone, String address, String description){
+        public Entity(int legal_ID, String name, String mail, int telephone, String address, String description){
     
         this.legal_ID = legal_ID;
         this.name = name;
+        this.mail = mail;
         this.telephone= telephone;
         this.address = address;
         this.description = description;
     }
 
     
-    public Entity(int id, int legal_ID, String name, int telephone, String address, String description){
+    public Entity(int id, int legal_ID, String name, String mail, int telephone, String address, String description){
     
         this.id = id;
         this.legal_ID = legal_ID;
         this.name = name;
+        this.mail = mail;
         this.telephone= telephone;
         this.address = address;
         this.description = description;
@@ -112,6 +114,20 @@ public class Entity {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * @return the mail
+     */
+    public String getMail() {
+        return mail;
+    }
+
+    /**
+     * @param mail the mail to set
+     */
+    public void setMail(String mail) {
+        this.mail = mail;
     }
     
     
