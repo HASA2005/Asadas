@@ -10,7 +10,7 @@ public class DBConnection {
     static String bd = "project1";
     static String port = "3306";
     static String login = "root";
-    static String password = "hasa17";
+    static String password = "Chavala";
     static String url = "jdbc:mariadb://localhost:" + port + "/" + bd;
 
     Connection connection = null;
