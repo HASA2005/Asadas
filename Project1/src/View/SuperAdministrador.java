@@ -89,11 +89,8 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jButtonExit = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jTextField13 = new javax.swing.JTextField();
         jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
         jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
         jComboBox3 = new javax.swing.JComboBox<>();
         jComboBox4 = new javax.swing.JComboBox<>();
         jComboBox5 = new javax.swing.JComboBox<>();
@@ -105,6 +102,9 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButtonExitNascent = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jButtonExtitMeasurement = new javax.swing.JButton();
@@ -112,7 +112,6 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jTextField20 = new javax.swing.JTextField();
         jTextField21 = new javax.swing.JTextField();
         jTextField22 = new javax.swing.JTextField();
-        jTextField23 = new javax.swing.JTextField();
         jComboBox11 = new javax.swing.JComboBox<>();
         jComboBox12 = new javax.swing.JComboBox<>();
         jComboBox13 = new javax.swing.JComboBox<>();
@@ -122,6 +121,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
@@ -143,10 +143,10 @@ public class SuperAdministrador extends javax.swing.JFrame {
 
         txtNameSuper.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtNameSuper.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel2.add(txtNameSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 53));
+        jPanel2.add(txtNameSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 200, 53));
 
         txtPasswordSuper.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Contraseña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel2.add(txtPasswordSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 210, 54));
+        jPanel2.add(txtPasswordSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 200, 54));
 
         txFirstnameSuper.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Primer Apellido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         txFirstnameSuper.addActionListener(new java.awt.event.ActionListener() {
@@ -154,19 +154,19 @@ public class SuperAdministrador extends javax.swing.JFrame {
                 txFirstnameSuperActionPerformed(evt);
             }
         });
-        jPanel2.add(txFirstnameSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 53));
+        jPanel2.add(txFirstnameSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 200, 53));
 
         txtSecondnameSuper.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtSecondnameSuper.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel2.add(txtSecondnameSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 210, 53));
+        jPanel2.add(txtSecondnameSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 200, 53));
 
         txtEmailSuper.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtEmailSuper.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Correo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel2.add(txtEmailSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 210, 54));
+        jPanel2.add(txtEmailSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 200, 54));
 
         cbxRoleSuper.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxRoleSuper.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbxRoleSuper.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rol", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
+        cbxRoleSuper.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Rol", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         cbxRoleSuper.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbxRoleSuperItemStateChanged(evt);
@@ -177,7 +177,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
                 cbxRoleSuperActionPerformed(evt);
             }
         });
-        jPanel2.add(cbxRoleSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 210, 50));
+        jPanel2.add(cbxRoleSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 200, 50));
 
         jToolBar1.setRollover(true);
         jPanel2.add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1213, 133, -1, -1));
@@ -189,11 +189,11 @@ public class SuperAdministrador extends javax.swing.JFrame {
                 jButtonAddUserSuperAdmActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonAddUserSuperAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 210, 40));
+        jPanel2.add(jButtonAddUserSuperAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 200, 50));
 
         cbxEntitySuper.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxEntitySuper.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbxEntitySuper.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Entidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
+        cbxEntitySuper.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Entidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         cbxEntitySuper.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbxEntitySuperItemStateChanged(evt);
@@ -204,7 +204,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
                 cbxEntitySuperActionPerformed(evt);
             }
         });
-        jPanel2.add(cbxEntitySuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 210, 48));
+        jPanel2.add(cbxEntitySuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 200, 50));
 
         jButtonEditSuperAdmi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButtonEditSuperAdmi.setText("Editar");
@@ -213,7 +213,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
                 jButtonEditSuperAdmiActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonEditSuperAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 100, 40));
+        jPanel2.add(jButtonEditSuperAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 90, 30));
 
         jButtonEliminateSuperAdmi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButtonEliminateSuperAdmi.setText("Eliminar");
@@ -222,7 +222,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
                 jButtonEliminateSuperAdmiActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonEliminateSuperAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 90, 40));
+        jPanel2.add(jButtonEliminateSuperAdmi, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 490, -1, 30));
 
         tblUserSuper.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tblUserSuper.setModel(new javax.swing.table.DefaultTableModel(
@@ -243,10 +243,10 @@ public class SuperAdministrador extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblUserSuper);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 29, 994, 463));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 29, 994, 480));
 
         jButtonExitUser.setForeground(new java.awt.Color(255, 0, 51));
-        jButtonExitUser.setText("Salir");
+        jButtonExitUser.setText("Atras");
         jButtonExitUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExitUserActionPerformed(evt);
@@ -255,7 +255,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jPanel2.add(jButtonExitUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(1127, 0, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TabFondoUser.png"))); // NOI18N
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1230, 520));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1230, 530));
 
         jTabUser.addTab("Usuario", jPanel2);
 
@@ -329,13 +329,13 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 45, 1010, 460));
 
         jButtonExitEntity.setForeground(new java.awt.Color(255, 0, 102));
-        jButtonExitEntity.setText("Salir");
+        jButtonExitEntity.setText("Atras");
         jButtonExitEntity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExitEntityActionPerformed(evt);
             }
         });
-        jPanel3.add(jButtonExitEntity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
+        jPanel3.add(jButtonExitEntity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoEntitySA.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -375,22 +375,22 @@ public class SuperAdministrador extends javax.swing.JFrame {
 
         jComboBox7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Provincia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jComboBox7.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Provincia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel5.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 230, 50));
 
         jComboBox8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Canton", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jComboBox8.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Canton", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel5.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 230, 50));
 
         jComboBox9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jComboBox9.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel5.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 230, 50));
 
         jComboBox10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Entidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jComboBox10.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Entidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel5.add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 230, 50));
 
         jButton15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -411,13 +411,13 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jPanel5.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 100, 40));
 
         jButtonExit.setForeground(new java.awt.Color(204, 0, 102));
-        jButtonExit.setText("Salir");
+        jButtonExit.setText("Atras");
         jButtonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExitActionPerformed(evt);
             }
         });
-        jPanel5.add(jButtonExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
+        jPanel5.add(jButtonExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoSamplingSitesSA.png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -427,45 +427,33 @@ public class SuperAdministrador extends javax.swing.JFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField13.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel4.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 180, 50));
-
         jTextField14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField14.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Direccion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel4.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 180, 50));
-
-        jTextField15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField15.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Latitud", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel4.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 180, -1));
+        jPanel4.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 180, 40));
 
         jTextField16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Longitud", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel4.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 180, 50));
-
-        jTextField17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField17.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Descripcion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel4.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 180, 48));
+        jPanel4.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 180, 40));
 
         jComboBox3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Provincia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        jPanel4.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 180, 50));
+        jComboBox3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Provincia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 180, 50));
 
         jComboBox4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Canton", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        jPanel4.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 180, 50));
+        jComboBox4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Canton", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 180, 50));
 
         jComboBox5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 180, 50));
+        jComboBox5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 180, 50));
 
         jComboBox6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox6.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Entidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        jPanel4.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 180, 50));
+        jComboBox6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Entidad", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 180, 50));
 
         jTable3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
@@ -504,7 +492,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jPanel4.add(jButtonExitNascent, new org.netbeans.lib.awtextra.AbsoluteConstraints(1401, 0, -1, -1));
 
         jButton1.setForeground(new java.awt.Color(204, 0, 102));
-        jButton1.setText("Salir");
+        jButton1.setText("Atras");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -512,8 +500,20 @@ public class SuperAdministrador extends javax.swing.JFrame {
         });
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, -1));
 
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descripción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 180, 40));
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Latitud", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 180, 40));
+
+        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 40));
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoNascent.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
+        jLabel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1240, 530));
 
         jTabUser.addTab("Naciente", jPanel4);
@@ -544,24 +544,20 @@ public class SuperAdministrador extends javax.swing.JFrame {
         jTextField22.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel6.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 170, 220, 49));
 
-        jTextField23.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField23.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clima", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-        jPanel6.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 225, 220, 49));
-
         jComboBox11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Realizado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        jPanel6.add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 281, 220, -1));
+        jComboBox11.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Realizado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel6.add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 220, -1));
 
         jComboBox12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Naciente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        jPanel6.add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 220, 40));
+        jComboBox12.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Naciente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel6.add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 220, 50));
 
         jComboBox13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sitio de muestreo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        jPanel6.add(jComboBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 220, -1));
+        jComboBox13.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Sitio de muestreo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel6.add(jComboBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 220, 50));
 
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -576,28 +572,33 @@ public class SuperAdministrador extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(jTable5);
 
-        jPanel6.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 970, 450));
+        jPanel6.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 970, 410));
 
         jButton18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton18.setText("Agregar");
-        jPanel6.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 180, 40));
+        jPanel6.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, 150, 50));
 
         jButton19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton19.setText("Editar");
-        jPanel6.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 110, 32));
+        jPanel6.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 470, 110, 50));
 
         jButton20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton20.setText("Eliminar");
-        jPanel6.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 105, 30));
+        jPanel6.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 100, 50));
 
         jButton2.setForeground(new java.awt.Color(255, 0, 102));
-        jButton2.setText("Salir");
+        jButton2.setText("Atras");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, -1, -1));
+        jPanel6.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, -1, -1));
+
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Clima", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel6.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 220, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoMeasurements.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -611,7 +612,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabUser, javax.swing.GroupLayout.PREFERRED_SIZE, 1230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -775,6 +776,7 @@ public class SuperAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonExitUser;
     private javax.swing.JButton jButtonExtitMeasurement;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox11;
     private javax.swing.JComboBox<String> jComboBox12;
@@ -808,22 +810,21 @@ public class SuperAdministrador extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JToolBar jToolBar1;

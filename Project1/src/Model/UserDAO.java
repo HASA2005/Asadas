@@ -111,4 +111,34 @@ public class UserDAO {
         }
     }
 
+    public User getUserByUsername(String username) {
+    DBConnection db = new DBConnection();
+    User user = null;
+    String sql = "SELECT * FROM users WHERE name = ?";
+    
+    try {
+        PreparedStatement ps = db.getConnection().prepareStatement(sql);
+        ps.setString(1, username);
+        ResultSet resultSet = ps.executeQuery();
+        
+        if (resultSet.next()) {
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+            String first_name = resultSet.getString("first_name");
+            String second_name = resultSet.getString("second_name");
+            String email = resultSet.getString("email");
+            String password = resultSet.getString("password");
+            int entity_id = resultSet.getInt("entity_id");
+            int role_id = resultSet.getInt("role_id");
+            user = new User(id, name, first_name, second_name, email, password, entity_id, role_id);
+        }
+    } catch (SQLException e) {
+        System.err.println("Error: " + e.getMessage());
+    } finally {
+        db.disconnect();
+    }
+    
+    return user;
+}
+
 }

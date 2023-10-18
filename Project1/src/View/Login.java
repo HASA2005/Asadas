@@ -1,5 +1,7 @@
 package View;
 
+import Model.User;
+import Model.UserDAO;
 import javax.swing.JOptionPane;
 
 
@@ -14,6 +16,7 @@ public class Login extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,6 +38,7 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(0, 0, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -44,16 +48,20 @@ public class Login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/user.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 230, 250));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 90, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         jTextNameUser.setBackground(new java.awt.Color(0, 0, 51));
         jTextNameUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -63,10 +71,12 @@ public class Login extends javax.swing.JFrame {
                 jTextNameUserActionPerformed(evt);
             }
         });
+        getContentPane().add(jTextNameUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 200, 30));
 
         jPasswordUser.setBackground(new java.awt.Color(51, 0, 51));
         jPasswordUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPasswordUser.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPasswordUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 200, 30));
 
         jButtonStart.setBackground(new java.awt.Color(0, 0, 255));
         jButtonStart.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -77,58 +87,11 @@ public class Login extends javax.swing.JFrame {
                 jButtonStartActionPerformed(evt);
             }
         });
+        getContentPane().add(jButtonStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo.png"))); // NOI18N
         jLabelFondo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jButton1))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(jPasswordUser, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(270, 270, 270)
-                .addComponent(jButtonStart))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel3))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(jTextNameUser, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabelFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton1)))
-                .addGap(10, 10, 10)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jPasswordUser, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jButtonStart))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(310, 310, 310)
-                .addComponent(jLabel3))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(jTextNameUser, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabelFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,31 +103,42 @@ public class Login extends javax.swing.JFrame {
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
-        String usuario = jTextNameUser.getText();
-        String contraseña = jPasswordUser.getText();
+        String username = jTextNameUser.getText();
+    String password = new String(jPasswordUser.getPassword()); // Get password as a String
+    
+    if (username.isEmpty() || password.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Error:  Algun campo está vacío");
+    } else {
+        UserDAO userDAO = new UserDAO();
+        User user = userDAO.getUserByUsername(username);
+        
+        if (user != null && user.getPassword().equals(password)) {
+            JOptionPane.showMessageDialog(null, "Inicio de secion correcto");
 
-        if (usuario.isEmpty() || contraseña.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Error algun campo está vacío");
-        } else {
-            if (usuario.equals("Digitador")) {
-                JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
+            // Determine which interface to open based on user's role_id
+            int roleId = user.getRole_id();
+            if (roleId == 1) {
+                // Open the Digitador interface
+                SuperAdministrador SAdm = new SuperAdministrador();
+                SAdm.setVisible(true);
+                this.dispose();
+            } else if (roleId == 2) {
+                // Open the Administrator interface
+                Administrador adm = new Administrador();
+                adm.setVisible(true);
+                this.dispose();
+            } else if (roleId == 3) {
+                // Open the Super Administrator interface
                 Digitador digitador = new Digitador();
                 digitador.setVisible(true);
                 this.dispose();
-            } else if (usuario.equals("Adm") && contraseña.equals("2023")) {
-                JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
-                Administrador Adm = new Administrador();
-                Adm.setVisible(true);
-                this.dispose();
-            } else if (usuario.equals("SA") && contraseña.equals("1234")) {
-                JOptionPane.showMessageDialog(null, "Ingresaste correctamente");
-                SuperAdministrador SuperAdm = new SuperAdministrador();
-                SuperAdm.setVisible(true);
-                this.dispose();
             } else {
-                JOptionPane.showMessageDialog(null, "Su usuario o contraseña está incorrecta");
+                JOptionPane.showMessageDialog(null, "Rol no es correcto");
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto");
         }
+    }
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
