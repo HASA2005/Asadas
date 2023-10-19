@@ -1,6 +1,7 @@
 
 package Controller;
 
+import Model.DBConnection;
 import Model.Entity;
 import Model.EntityDAO;
 import Model.Role;
@@ -119,5 +120,48 @@ public class CTRLUser {
         }
         c.setModel(model);
     }
+    public void loadUserToTable(JTable table, String username) {
+    DefaultTableModel model = (DefaultTableModel) table.getModel();
+    model.setRowCount(0); // Limpia la tabla antes de agregar datos
 
+    UserDAO userDAO = new UserDAO();
+    User user = userDAO.getUserByUsername(username);
+
+    if (user != null) {
+        Object[] row = {
+            user.getId(),
+            user.getName(),
+            user.getFirst_name(),
+            user.getSecond_name(),
+            user.getEmail(),
+            user.getPassword(),
+            ed.getNameEntity(user.getEntity_id()),
+            rd.getNameRole(user.getRole_id())
+        };
+        model.addRow(row);
+    }
+}
+    
+     public void loadUserToTableByUsername(JTable table) {
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        model.setRowCount(0); // Clear the table before adding data
+
+        UserDAO userDAO = new UserDAO();
+        String username = null;
+        User user = userDAO.getUserByUsername(username);
+
+        if (user != null) {
+            Object[] row = {
+                user.getId(),
+                user.getName(),
+                user.getFirst_name(),
+                user.getSecond_name(),
+                user.getEmail(),
+                user.getPassword(),
+                ed.getNameEntity(user.getEntity_id()),
+                rd.getNameRole(user.getRole_id())
+            };
+            model.addRow(row);
+        }
+    }
 }

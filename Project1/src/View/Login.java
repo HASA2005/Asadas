@@ -17,7 +17,6 @@ public class Login extends javax.swing.JFrame {
         this.setResizable(false);
     }
     
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -113,7 +112,7 @@ public class Login extends javax.swing.JFrame {
         User user = userDAO.getUserByUsername(username);
         
         if (user != null && user.getPassword().equals(password)) {
-            JOptionPane.showMessageDialog(null, "Inicio de secion correcto");
+            //JOptionPane.showMessageDialog(null, "Inicio de secion correcto");
 
             // Determine which interface to open based on user's role_id
             int roleId = user.getRole_id();
