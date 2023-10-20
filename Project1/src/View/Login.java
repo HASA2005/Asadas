@@ -129,6 +129,7 @@ public class Login extends javax.swing.JFrame {
             } else if (roleId == 3) {
                 // Open the Super Administrator interface
                 Digitador digitador = new Digitador();
+                digitador.cargarTabla();
                 digitador.setVisible(true);
                 this.dispose();
             } else {
@@ -144,7 +145,6 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,6 +1,10 @@
 package View;
 
 import Controller.CTRLUser;
+import Model.User;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import View.Login;
 
 
 
@@ -14,17 +18,14 @@ public class Digitador extends javax.swing.JFrame {
     public Digitador() { 
         initComponents();
         this.setLocationRelativeTo(null);
-        this.listUser();
-        this.clear();
     }
-    
-    private void listUser() {
-        this.CU.loadUserToTableByUsername(tblUserDigitador);
+     public void cargarTabla() {
+        // Lógica para cargar los datos en la tabla
+        // Por ejemplo:
+       this.CU.loadDataUser(tblUserDigitador);
+        // Agregar filas de datos al modelo
     }
-        
-    private void clear() {
-        this.CU.clearFields(txtNameDigitador, txtFirst_NameDigitador, txtSecond_NameDigitador, txtEmailDigitador, txtpasswordDigitador);
-    }
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,6 +47,8 @@ public class Digitador extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUserDigitador = new javax.swing.JTable();
         jButton3 = new javax.swing.JButton();
+        jButtonUser = new javax.swing.JButton();
+        txtname = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
@@ -133,7 +136,11 @@ public class Digitador extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("Editar");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 260, 49));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 260, 49));
+
+        jButtonUser.setText("Buscar");
+        jPanel2.add(jButtonUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, 180, 50));
+        jPanel2.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 170, 40));
 
         jTabAdmNaciente.addTab("Usuario", jPanel2);
 
@@ -260,6 +267,7 @@ public class Digitador extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonExitMeasurement;
     private javax.swing.JButton jButtonExitUser;
+    private javax.swing.JButton jButtonUser;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
@@ -280,6 +288,7 @@ public class Digitador extends javax.swing.JFrame {
     private javax.swing.JTextField txtFirst_NameDigitador;
     private javax.swing.JTextField txtNameDigitador;
     private javax.swing.JTextField txtSecond_NameDigitador;
+    private javax.swing.JTextField txtname;
     private javax.swing.JTextField txtpasswordDigitador;
     // End of variables declaration//GEN-END:variables
 }
