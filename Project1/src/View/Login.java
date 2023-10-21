@@ -1,5 +1,6 @@
 package View;
 
+import Controller.CTRLUser;
 import Model.User;
 import Model.UserDAO;
 import javax.swing.JOptionPane;
@@ -7,6 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
+    CTRLUser CU = new CTRLUser();
     /**
      * Creates new form Login
      */
@@ -102,20 +104,18 @@ public class Login extends javax.swing.JFrame {
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
-        String username = jTextNameUser.getText();
+        String name = jTextNameUser.getText();
     String password = new String(jPasswordUser.getPassword()); // Get password as a String
+    User log = CU.loadUserByUsername(password);
     
-    if (username.isEmpty() || password.isEmpty()) {
+    if (name.isEmpty() || password.isEmpty()) {
         JOptionPane.showMessageDialog(null, "Error:  Algun campo está vacío");
-    } else {
-        UserDAO userDAO = new UserDAO();
-        User user = userDAO.getUserByUsername(username);
         
-        if (user != null && user.getPassword().equals(password)) {
+    } else if (log != null && log.getPassword().equals(password)) {
             //JOptionPane.showMessageDialog(null, "Inicio de secion correcto");
 
             // Determine which interface to open based on user's role_id
-            int roleId = user.getRole_id();
+            int roleId = log.getRole_id();
             if (roleId == 1) {
                 // Open the Digitador interface
                 SuperAdministrador SAdm = new SuperAdministrador();
@@ -129,6 +129,7 @@ public class Login extends javax.swing.JFrame {
             } else if (roleId == 3) {
                 // Open the Super Administrator interface
                 Digitador digitador = new Digitador();
+                this.CU.loadUserByUsername(password);
                 digitador.setVisible(true);
                 this.dispose();
             } else {
@@ -137,14 +138,13 @@ public class Login extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto");
         }
-    }
+    
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

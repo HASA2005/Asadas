@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 
 
 public class UserDAO {
@@ -141,4 +142,89 @@ public class UserDAO {
     return user;
 }
 
+    
+    public User getUserUsername(String username) {
+    DBConnection db = new DBConnection();
+    User user = null;
+    String sql = "SELECT * FROM users WHERE name = ?";  // Asumiendo que el nombre de usuario se encuentra en la columna 'name'.
+
+    try {
+        PreparedStatement ps = db.getConnection().prepareStatement(sql);
+        ps.setString(1, username);
+        ResultSet resultSet = ps.executeQuery();
+
+        if (resultSet.next()) {
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+            String first_name = resultSet.getString("first_name");
+            String second_name = resultSet.getString("second_name");
+            String email = resultSet.getString("email");
+            String password = resultSet.getString("password");
+            int entity_id = resultSet.getInt("entity_id");
+            int role_id = resultSet.getInt("role_id");
+            user = new User(id, name, first_name, second_name, email, password, entity_id, role_id);
+        }
+    } catch (SQLException e) {
+        System.err.println("Error: " + e.getMessage());
+    } finally {
+        db.disconnect();
+    }
+
+    return user;
+}
+    public List<User> getUsersByRoleID(int roleID) {
+    DBConnection db = new DBConnection();
+    List<User> users = new ArrayList<>();
+    String sql = "SELECT * FROM users WHERE name = ?";
+
+    try {
+        PreparedStatement ps = db.getConnection().prepareStatement(sql);
+        ps.setInt(1, roleID);
+        ResultSet resultSet = ps.executeQuery();
+        while (resultSet.next()) {
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+            String first_name = resultSet.getString("first_name");
+            String second_name = resultSet.getString("second_name");
+            String email = resultSet.getString("email");
+            String password = resultSet.getString("password");
+            int entity_id = resultSet.getInt("entity_id");
+            int user_role_id = resultSet.getInt("role_id");
+            users.add(new User(id, name, first_name, second_name, email, password, entity_id, user_role_id));
+        }
+    } catch (SQLException e) {
+        System.err.println("Error: " + e.getMessage());
+    } finally {
+        db.disconnect();
+    }
+    return users;
+}
+
+    public User getUsersUsername( String password) {
+    DBConnection db = new DBConnection();
+    User user = null;
+    String sql = "SELECT * FROM users WHERE password = ?";
+    
+    try {
+        PreparedStatement ps = db.getConnection().prepareStatement(sql);
+        ps.setString(1, password);
+        ResultSet resultSet = ps.executeQuery();
+        
+        if (resultSet.next()) {
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+            String first_name = resultSet.getString("first_name");
+            String second_name = resultSet.getString("second_name");
+            String email = resultSet.getString("email");
+            int entity_id = resultSet.getInt("entity_id");
+            int role_id = resultSet.getInt("role_id");
+            user = new User(id, name, first_name, second_name, email, password, entity_id, role_id);
+        }
+    } catch (SQLException e) {
+        System.err.println("Error: " + e.getMessage());
+    } finally {
+        db.disconnect();
+    }    
+    return user;
+}    
 }

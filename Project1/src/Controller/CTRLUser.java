@@ -36,8 +36,7 @@ public class CTRLUser {
         model.setRowCount(0);
         List<User> users = ud.read();
         for (User user : users) {
-            Object[] row = {user.getId(), user.getName(), user.getFirst_name(),
-                user.getSecond_name(), user.getEmail(),user.getPassword(),this.ed.getNameEntity(user.getEntity_id()),this.rd.getNameRole(user.getRole_id())};
+            Object[] row = {user.getId(), user.getName(), user.getFirst_name(),user.getSecond_name(), user.getEmail(),user.getPassword(),this.ed.getNameEntity(user.getEntity_id()),this.rd.getNameRole(user.getRole_id())};
             model.addRow(row);
         }
     }
@@ -120,48 +119,19 @@ public class CTRLUser {
         }
         c.setModel(model);
     }
-    public void loadUserToTable(JTable table, String username) {
-    DefaultTableModel model = (DefaultTableModel) table.getModel();
-    model.setRowCount(0); // Limpia la tabla antes de agregar datos
 
+    public User loadUserByUsername( String password) {
     UserDAO userDAO = new UserDAO();
-    User user = userDAO.getUserByUsername(username);
+    User user = userDAO.getUsersUsername(password);
 
     if (user != null) {
-        Object[] row = {
-            user.getId(),
-            user.getName(),
-            user.getFirst_name(),
-            user.getSecond_name(),
-            user.getEmail(),
-            user.getPassword(),
-            ed.getNameEntity(user.getEntity_id()),
-            rd.getNameRole(user.getRole_id())
-        };
-        model.addRow(row);
+        // Aquí puedes acceder a las propiedades del usuario, por ejemplo: user.getName(), user.getEmail(), etc.
+        return user;
+    } else {
+        // El usuario no se encontró en la base de datos.
+        JOptionPane.showMessageDialog(null, "Usuario no encontrado");
     }
-}
-    
-     public void loadUserToTableByUsername(JTable table) {
-        DefaultTableModel model = (DefaultTableModel) table.getModel();
-        model.setRowCount(0); // Clear the table before adding data
+        return user;
 
-        UserDAO userDAO = new UserDAO();
-        String username = null;
-        User user = userDAO.getUserByUsername(username);
-
-        if (user != null) {
-            Object[] row = {
-                user.getId(),
-                user.getName(),
-                user.getFirst_name(),
-                user.getSecond_name(),
-                user.getEmail(),
-                user.getPassword(),
-                ed.getNameEntity(user.getEntity_id()),
-                rd.getNameRole(user.getRole_id())
-            };
-            model.addRow(row);
-        }
     }
-}
+ }

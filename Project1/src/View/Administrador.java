@@ -1,6 +1,7 @@
 package View;
 
 
+
 public class Administrador extends javax.swing.JFrame {
 
     /**
@@ -28,7 +29,6 @@ public class Administrador extends javax.swing.JFrame {
         txtSecond_Name = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         txtpassword = new javax.swing.JTextField();
-        jButtonExitUser = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUsers = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
@@ -36,6 +36,7 @@ public class Administrador extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jComboBox11 = new javax.swing.JComboBox<>();
         jComboBox12 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
@@ -44,7 +45,6 @@ public class Administrador extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
-        jButtonExitNascent = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
@@ -57,12 +57,12 @@ public class Administrador extends javax.swing.JFrame {
         jComboBox4 = new javax.swing.JComboBox<>();
         jComboBox5 = new javax.swing.JComboBox<>();
         jComboBox6 = new javax.swing.JComboBox<>();
-        jButtonExitSamplingSite = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
@@ -71,13 +71,17 @@ public class Administrador extends javax.swing.JFrame {
         jComboBox7 = new javax.swing.JComboBox<>();
         jComboBox8 = new javax.swing.JComboBox<>();
         jComboBox9 = new javax.swing.JComboBox<>();
-        jButtonExitMeasurement = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
         jComboBox10 = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -115,14 +119,6 @@ public class Administrador extends javax.swing.JFrame {
         txtpassword.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Contraseña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel2.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 240, 50));
 
-        jButtonExitUser.setText("Salir");
-        jButtonExitUser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExitUserActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButtonExitUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(1154, 6, -1, -1));
-
         tblUsers.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tblUsers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,12 +128,12 @@ public class Administrador extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "id", "Nombre", "Primer Apellido", "Segundo Apellido", "Correo", "Contraseña", "Entidad", "Rol"
+                "ID", "Nombre", "Primer Apellido", "Segundo Apellido", "Correo", "Contraseña", "Entidad", "Rol"
             }
         ));
         jScrollPane1.setViewportView(tblUsers);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 40, 960, 510));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 10, 960, 540));
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Agregar");
@@ -160,6 +156,10 @@ public class Administrador extends javax.swing.JFrame {
         jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox12.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Rol", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel2.add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 240, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoUserAdm.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 1330, 570));
 
         jTabAdmNaciente.addTab("Usuario", jPanel2);
 
@@ -201,14 +201,6 @@ public class Administrador extends javax.swing.JFrame {
         jComboBox3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel3.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 190, 50));
 
-        jButtonExitNascent.setText("Salir");
-        jButtonExitNascent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExitNascentActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButtonExitNascent, new org.netbeans.lib.awtextra.AbsoluteConstraints(1154, 0, -1, -1));
-
         jTable2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -223,7 +215,7 @@ public class Administrador extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 1020, 440));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 1020, 470));
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton6.setText("Agregar");
@@ -282,14 +274,6 @@ public class Administrador extends javax.swing.JFrame {
         jComboBox6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel4.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 190, 50));
 
-        jButtonExitSamplingSite.setText("Salir");
-        jButtonExitSamplingSite.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExitSamplingSiteActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButtonExitSamplingSite, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 0, -1, -1));
-
         jTable3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -307,7 +291,7 @@ public class Administrador extends javax.swing.JFrame {
             jTable3.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 30, 990, 522));
+        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 12, 990, 540));
 
         jButton10.setText("Agregar");
         jPanel4.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 262, 162, 54));
@@ -317,6 +301,10 @@ public class Administrador extends javax.swing.JFrame {
 
         jButton12.setText("Eliminar");
         jPanel4.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 406, 162, 54));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoSitioDeMuestreoAdm.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1250, 570));
 
         jTabAdmNaciente.addTab("Stio de Muestreo", jPanel4);
 
@@ -353,14 +341,6 @@ public class Administrador extends javax.swing.JFrame {
         jComboBox9.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Sitio de Muestreo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel5.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 240, -1));
 
-        jButtonExitMeasurement.setText("Salir");
-        jButtonExitMeasurement.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExitMeasurementActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButtonExitMeasurement, new org.netbeans.lib.awtextra.AbsoluteConstraints(1154, 6, -1, -1));
-
         jButton14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton14.setText("Agregar");
         jPanel5.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, 120, 50));
@@ -387,14 +367,47 @@ public class Administrador extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(jTable4);
 
-        jPanel5.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 41, 974, 450));
+        jPanel5.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 11, 974, 480));
 
         jComboBox10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox10.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Clima", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPanel5.add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 240, 50));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoMedicionAdm.jpg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1240, 560));
+
         jTabAdmNaciente.addTab("Medición", jPanel5);
+
+        jMenuBar1.setBackground(new java.awt.Color(102, 255, 255));
+        jMenuBar1.setForeground(new java.awt.Color(51, 255, 51));
+
+        jMenu1.setBackground(new java.awt.Color(255, 0, 51));
+        jMenu1.setText("Menu");
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("Reporte");
+        jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jCheckBoxMenuItem1);
+
+        jCheckBoxMenuItem2.setSelected(true);
+        jCheckBoxMenuItem2.setText("Salir");
+        jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jCheckBoxMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -409,8 +422,8 @@ public class Administrador extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabAdmNaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabAdmNaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -421,37 +434,9 @@ public class Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
-    private void jButtonExitMeasurementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitMeasurementActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        Login log = new Login();
-        log.setVisible(true);
-    }//GEN-LAST:event_jButtonExitMeasurementActionPerformed
-
-    private void jButtonExitSamplingSiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitSamplingSiteActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        Login log = new Login();
-        log.setVisible(true);
-    }//GEN-LAST:event_jButtonExitSamplingSiteActionPerformed
-
-    private void jButtonExitUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitUserActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        Login log = new Login();
-        log.setVisible(true);
-    }//GEN-LAST:event_jButtonExitUserActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButtonExitNascentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitNascentActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        Login log = new Login();
-        log.setVisible(true);
-    }//GEN-LAST:event_jButtonExitNascentActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
@@ -460,6 +445,22 @@ public class Administrador extends javax.swing.JFrame {
     private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Reporte re = new Reporte(this,true);
+        re.pack();
+        re.setVisible(true);        
+    }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
+
+    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Login log = new Login();
+        this.pack();
+        log.setVisible(true);
+    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -475,10 +476,8 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButtonExitMeasurement;
-    private javax.swing.JButton jButtonExitNascent;
-    private javax.swing.JButton jButtonExitSamplingSite;
-    private javax.swing.JButton jButtonExitUser;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox11;
@@ -492,6 +491,11 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -522,4 +526,8 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField txtSecond_Name;
     private javax.swing.JTextField txtpassword;
     // End of variables declaration//GEN-END:variables
+
+    private Reporte Reporte(Administrador aThis, boolean par) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

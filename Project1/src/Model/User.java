@@ -145,13 +145,7 @@ public class User {
         this.role_id = role_id;
     }
 
-    public String getFirstName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-
-
-}
+   }
 
 
 

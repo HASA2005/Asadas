@@ -1,8 +1,10 @@
 package View;
 
 import Controller.CTRLUser;
-
-
+import Model.User;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import View.Login;
 
 
 public class Digitador extends javax.swing.JFrame {
@@ -14,17 +16,9 @@ public class Digitador extends javax.swing.JFrame {
     public Digitador() { 
         initComponents();
         this.setLocationRelativeTo(null);
-        this.listUser();
-        this.clear();
     }
     
-    private void listUser() {
-        this.CU.loadUserToTableByUsername(tblUserDigitador);
-    }
-        
-    private void clear() {
-        this.CU.clearFields(txtNameDigitador, txtFirst_NameDigitador, txtSecond_NameDigitador, txtEmailDigitador, txtpasswordDigitador);
-    }
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -133,7 +127,12 @@ public class Digitador extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("Editar");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 260, 49));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 260, 49));
 
         jTabAdmNaciente.addTab("Usuario", jPanel2);
 
@@ -251,6 +250,10 @@ public class Digitador extends javax.swing.JFrame {
     private void tblUserDigitadorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tblUserDigitadorAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_tblUserDigitadorAncestorAdded
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
